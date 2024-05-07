@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.w_three{
+    margin: 40px 80px;
+}
+.backflex{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+.w_seven{
+    height: 80px;
+    margin-top: 50px;
+    background-size: cover;
+}
+.form_header{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: end;
+    display: flex;
+    justify-content: space-between;   
+}
+.WELCOME{
+
+   color: rgb(0, 0, 0);
+    text-shadow:3px 2px 5px #3cde49 ;
+}
+.card_img{
+    height: auto;
+    width: 250px;
+    float: right;
+}
+.Commander_s{
+    font-size: 30px;
+    color: green;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 15px;
+    width: 500px;
+    border-radius: 10px;
+    border: 3px solid #c8c9c8; 
+    margin-bottom: 20px; 
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.enter{
+    background-color: rgb(255, 255, 255);
+    /* border: 3px solid rgb(14, 14, 14); */
+    /* box-shadow:3px 3px 5px #3cde49 ; */
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 8px 30px;
+    font-size: 20px;
+    width: 100%;
+}
+.seven_head{
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 40px;
+    color: green;
+    text-shadow: 1px 1px 1px  whitesmoke; 
+}
+.display_h{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+    margin: 60px 40px 0px 40px;
+    display: flex;
+    border-bottom: 2px solid blue;
+}
+.sid{
+    width: 70px;
+    color: white;
+}
+#nameid::placeholder{
+    background-color: transparent;
+}
+.sname{
+    width: 220px;
+    color: black;
+    font-weight: 400;
+}
+.sdomain{
+    width: 270px;
+    color: black;
+    font-weight: 400;
+}
+.semail{
+    width: 270px;
+    color: black;
+    font-weight: 400;
+}
+.saction{
+    width: 250px;
+    color: black;
+    font-weight: 400;
+}
+.ndivc{
+    margin: 5px 40px;
+    /* border-bottom: 2px solid blue; */
+    padding-bottom: 4px;
+    padding-top: 8px;
+    display: flex;
+    gap: 50px;
+}
+.nidc{
+    padding: 10px 5px 5px 5px;
+    width: 50px;
+    
+}
+.nnamec{
+    padding: 10px 5px 5px 5px;
+    width: 170px;   
+}
+.ndomainc{
+    padding: 10px 5px 5px 5px;
+    width: 220px; 
+}
+.nmailc{
+    padding: 10px 5px 5px 5px;
+    width: 220px; 
+}
+.editb{
+    padding: 8px 5px 5px 5px;
+    width: 68px;
+    font-size: 16px;
+    background-color: yellow;
+    border: none;
+}
+.savec{
+    padding: 8px 5px 5px 5px;
+    width: 68px;
+    font-size: 16px;
+    background-color: green;
+    border: none;
+}
+.delc{
+    padding: 8px 5px 5px 5px;
+    width: 65px;
+    font-size: 16px;
+    background-color: red;
+    border: none;
+}
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .main{
+    display: flex;
+    height: auto;
+    margin: 20px 0px;
+}
+.subdivone{
+    width: 50%;
+    padding: 10px;
+    background-color: #c6ffc6;
+}
+.welcometext{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+  .bgcolor{
+    /* background-color: #c6ffc6; */
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heading{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .viewdata{
+    font-weight: 200;
+    text-decoration: underline;
+    color:#3cde49;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+  .register{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .enter1{
+    text-align: right;
+    font-weight: 200;
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .mainddivi{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .subdivtwo{
+    width: 50%;
+  }

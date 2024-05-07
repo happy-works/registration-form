@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="./cred.css">
+</head>
+<body>
+     <div class="preloader">
+        <div class="loader"></div>
+      </div> 
+      <div class="bgcolor">
+        <div class="d_flex">
+            <!-- <img class="card_img" src="./asset/kaibot-coding-cards-2.webp" alt=""> -->
+            <div class="main">
+                <div class="subdivone">
+                    <img src="/changed.webp" alt=""  width="100%">
+
+                    <h3 class="welcometext">WELCOME TO THE CODING WAR</h3>
+                </div>
+                <div class="subdivtwo">
+                    <div class="w_three" id="w_three">
+           
+                        <div class="form_con">
+                            <div class="Commander_s">
+                                <span>Join as a commander</span>
+                            </div>
+                            <div class="">
+                                <h2 class="heading">Name</h2>
+                                <input type="text" placeholder="Enter your name" class="input" id="nameid">
+                            </div>
+                            <div class="">
+                                <h2 class="heading">Domain</h2>
+                                <input type="text" placeholder="Enter your domain" class="input" id="domainid">
+                            </div>
+                            <div class="">
+                                <h2 class="heading">Email</h2>
+                                <input type="email" placeholder="Enter your email" class="input" id="emailid">
+                            </div>
+                            <div class="">
+                                <h2 class="heading">Password</h2>
+                                <input type="password" placeholder="Enter your password" class="input" id="passwordid">
+                            </div>
+                            <div class="center">
+                                <button  class="enter" id="buttonid">Register</button>
+                            </div>
+                            <div class="center">
+                                <h3  class="viewdata" >click here to view data</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+          
+            <div class="w_seven" id="w_seven">
+                <div class="mainddivi">
+                    <div class="seven_head">
+                        <div class="">
+                         <span class="register">Registered commanders</span>
+                         <h3  class="enter1" id="return">Back</h3>
+                        </div>
+                     </div>
+                     <div id="displayid">
+                         <div class="display_h">
+                             <!-- <div class="sid"><span class="center" >ID</span></div> -->
+                             <div class="sname"><span class="">NAME</span></div>
+                             <div class="sdomain"><span class="">DOMAIN</span></div>
+                             <div class="semail"><span class="">EMAIL</span></div>
+                             <div class="saction"><span class="">ACTIONS</span></div>
+                         </div>
+         
+                     </div>
+                </div>
+              
+            </div>
+        </div>
+      </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  // Simulate content loading
+  setTimeout(function () {
+    // Hide the preloader
+    document.querySelector(".preloader").style.display = "none";
+
+    // Show the content
+    document.querySelector(".content").style.display = "block";
+  }, 3000); // Change the time to simulate a delay in content loading (in milliseconds)
+});
+
+        let name = document.getElementById("nameid");
+        let domain = document.getElementById("domainid");
+        let email = document.getElementById("emailid");
+        let password = document.getElementById("passwordid");
+        let enter = document.getElementById("buttonid");
+        let returna = document.getElementById("return");
+        let display = document.getElementById("displayid");
+        let viewdata = document.querySelector(".viewdata");
+        let seven = document.getElementById("w_seven");
+        viewdata.addEventListener("click",()=>{
+            seven.style.display="block";
+        })
+
+        let three = document.getElementById("w_three")
+         
+        seven.style.display="none";
+
+        enter.addEventListener("click",()=>{
+            let creatediv = document.createElement("div");
+            creatediv.classList.add("ndivc");
+            display.appendChild(creatediv);
+
+            seven.style.display="block";
+            // three.style.display="none";
+          
+
+            // let id = document.createElement("input");
+            // id.classList.add("nidc");
+            // id.value=creatediv.length;
+            // creatediv.appendChild(id);
+
+            let newname = document.createElement("input");
+            newname.classList.add("nnamec");
+            creatediv.appendChild(newname);
+            newname.value = name.value;
+            newname.setAttribute("readonly","readonly");
+            name.value="";
+
+            let newdomain = document.createElement("input");
+            newdomain.classList.add("ndomainc");
+            creatediv.appendChild(newdomain);
+            newdomain.value = domain.value;
+            newdomain.setAttribute("readonly","readonly");
+            domain.value="";
+
+            let newmail = document.createElement("input");
+            newmail.classList.add("nmailc");
+            creatediv.appendChild(newmail);
+            newmail.value = email.value;
+            newmail.setAttribute("readonly","readonly");
+            email.value="";
+
+            let newpass = document.createElement("input");
+            creatediv.appendChild(newpass);
+            newpass.value = newpass.value;
+            newpass.setAttribute("readonly","readonly");
+            newpass.style.display="none"
+            password.value="";
+
+            let edit = document.createElement("button");
+            edit.classList.add("editb");
+            creatediv.appendChild(edit);
+            edit.innerHTML="Edit";
+            edit.addEventListener("click",()=>{
+                newname.removeAttribute("readonly","readonly");
+                newdomain.removeAttribute("readonly","readonly");
+                newmail.removeAttribute("readonly","readonly");
+            })
+
+
+            let save = document.createElement("button");
+            save.classList.add("savec")
+            creatediv.appendChild(save);
+            save.innerHTML="Save";
+            save.addEventListener("click",()=>{
+                newname.setAttribute("readonly","readonly");
+                newdomain.setAttribute("readonly","readonly");
+                newmail.setAttribute("readonly","readonly");
+            })
+
+            let ndelete = document.createElement("button");
+            ndelete.classList.add("delc")
+            creatediv.appendChild(ndelete);
+            ndelete.innerHTML="Delete";
+            ndelete.addEventListener("click",()=>{
+                creatediv.style.display="none";
+            })
+        })
+
+        returna.addEventListener("click",()=>{
+            seven.style.display="none";
+            three.style.display="block";
+
+        })
+
+
+
+    </script>
+</body>
+</html>
